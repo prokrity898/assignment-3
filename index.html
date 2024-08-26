@@ -4,26 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 3</title>
+
+    <!--Tailwind CDN-->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Daisy UI-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Manrope font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'btn-bg': '#ABEF5F',
+                        'header-text': '#212121',
+                        'pera-text1': '#494949',
+                        'pera-text2': '#737373',
+                        'btn-text': '#1C1C1C',
+                    },
+                    borderRadius: {
+                        'btn-radius': '32px', 
+                    },
+                    fontFamily: {
+                        'manrope': ['Manrope', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+   
 </head>
-<body>
+<body class="font-manrope">
     <header>
-        <div class="container mx-0 my-auto flex justify-around items-center">
-            <div>
-                <img src="" alt="">
-                <h2 class="text-3xl font-extrabold">Rinterio</h2>
+        <div class="container mx-auto mt-12 flex justify-around items-center">
+            <div class="flex justify-center  items-center">
+                <div class="bg-btn-bg rounded-full px-2.5 py-2.5 mr-2 flex justify-center  items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 w-3 rotate-[315deg]" stroke="currentColor">
+                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                </div>
+                <h2 class="text-3xl text-header-text font-extrabold">Rinterio</h2>
             </div>
-            <div>
-                <ul class="flex ">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Blogs</a></li>
-                    <li><a href="">Contact US</a></li>
+            <div class="flex">
+                <ul class="flex justify-start">
+                    <li><a class="mr-2 font-extrabold text-pera-text1" href="">Home</a></li>
+                    <li><a class="mr-2 font-normal text-pera-text2" href="">Services</a></li>
+                    <li><a class="mr-2 font-normal text-pera-text2" href="">Portfolio</a></li>
+                    <li><a class="mr-2 font-normal text-pera-text2" href="">Blogs</a></li>
+                    <li><a class="font-normal text-pera-text2" href="">Contact US</a></li>
                 </ul>
+            </div>
+            <div class="flex items-center space-x-4">
+                <!--Search button-->
+                <button class="bg-white rounded-full p-3 border border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M8 16a8 8 0 100-16 8 8 0 000 16z" />
+                    </svg>
+                </button>
+                <!--Cart button-->
+                <button class="bg-white rounded-full p-3 border border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 6m2-6h10m-2 6a2 2 0 11-4 0" />
+                    </svg>
+                </button>
+
+                </button>
+                <button class="bg-btn-bg text-xl btn-text font-extrabold rounded-btn-radius px-5 py-3 flex items-center">
+                    Book Consult
+                    <div class="bg-black rounded-full px-2.5 py-2.5 ml-2 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 w-3 rotate-[315deg]" stroke="currentColor" fill="white">
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                        </svg>
+                    </div>
+                </button>
             </div>
         </div>
     </header>
