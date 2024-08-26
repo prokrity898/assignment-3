@@ -22,6 +22,7 @@
                 extend: {
                     colors: {
                         'btn-bg': '#ABEF5F',
+                        'btn-bg2': 'rgba(171, 239, 95, 0.5)',
                         'header-text': '#212121',
                         'pera-text1': '#494949',
                         'pera-text2': '#737373',
@@ -41,7 +42,7 @@
 </head>
 <body class="font-manrope">
     <header>
-        <div class="container mx-auto mt-12 flex justify-around items-center">
+        <div class="container mx-auto mt-12 flex justify-around md:justify-between items-center">
             <div class="flex justify-center  items-center">
                 <div class="bg-btn-bg rounded-full px-2.5 py-2.5 mr-2 flex justify-center  items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 w-3 rotate-[315deg]" stroke="currentColor">
@@ -50,7 +51,7 @@
                 </div>
                 <h2 class="text-3xl text-header-text font-extrabold">Rinterio</h2>
             </div>
-            <div class="flex">
+            <div class="hidden lg:flex">
                 <ul class="flex justify-start">
                     <li><a class="mr-2 font-extrabold text-pera-text1" href="">Home</a></li>
                     <li><a class="mr-2 font-normal text-pera-text2" href="">Services</a></li>
@@ -59,9 +60,9 @@
                     <li><a class="font-normal text-pera-text2" href="">Contact US</a></li>
                 </ul>
             </div>
-            <div class="flex items-center space-x-4">
+            <div class="hidden lg:flex items-center space-x-4">
                 <!--Search button-->
-                <button class="bg-white rounded-full p-3 border border-gray-300">
+                <button class="bg-white rounded-full p-3 border border-gray-300 flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M8 16a8 8 0 100-16 8 8 0 000 16z" />
                     </svg>
@@ -83,10 +84,32 @@
                     </div>
                 </button>
             </div>
+            <div class="lg:hidden">
+                <button class="bg-white rounded-full p-3 border border-gray-300 flex justify-center items-center">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 w-3" stroke="currentColor" fill="black">
+                        <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                    </div>
+                </button>
+            </div>
         </div>
     </header>
     <main>
-
+        <banner class="flex items-center justify-center mt-12 mx-auto max-w-[80%] w-full">
+            <div class="text-center">
+                <img class="pb-6 mx-auto" src="images/banner.png" alt="">
+                <h2 class="font-extrabold text-2xl sm:text-6xl text-header-text pb-6"> A barn house of this design has a striking appearance</h2>
+                <p class="pb-6 font-medium text-pera-text2 text-sm sm:text-base">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+                <button class=" bg-btn-bg2 text-xl text-header-text font-bold rounded-btn-radius mx-auto w-full sm:w-auto px-5 py-3 flex items-center justify-center">
+                    View Details
+                    <div class="bg-btn-bg rounded-full px-2.5 py-2.5 ml-2 flex justify-center  items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-3 w-3 rotate-[315deg]" stroke="currentColor">
+                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </banner>
     </main>
     <footer>
 
